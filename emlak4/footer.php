@@ -1,0 +1,214 @@
+<?php !defined('security') ? die('Aradığınız sayfaya ulaşılamıyor!') : null; ?>
+<!-- footers 20 -->
+<section class="w3l-footers-20">
+    <div class="footers20">
+        <div class="container">
+            <div class="footers20-content">
+                <div class="d-grid grid-col-4 grids-content">
+                    <div class="column">
+                        <a href="#url" class="link"><span class="fa fa-comments"></span></a>
+                        <a href="#url" class="title-small">Ücretsiz Danışmanlık</a>
+                        <h4>Uzmanımızla ücretsiz danışmanlık randevusu alın.</h4>
+                        <a href="Iletisim" class="btn btn-style btn-primary"> Randevu Al
+                            <span class="fa fa-long-arrow-right ml-2"></span> </a>
+                    </div>
+                    <div class="column">
+                        <a href="#url" class="link"><span class="fa fa-phone"></span></a>
+                        <a href="#url" class="title-small">Yardım Masası</a>
+                        <h4>Sorularınız mı var veya daha fazla bilgi mi istiyorsunuz? Şimdi Ara</h4>
+                        <a href="tel:+905075691340">
+                            <p class="contact-phone mt-2"><span class="lnr lnr-phone-handset"></span> 0507 569 1340
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-grid grid-col-3 grids-content1 bottom-border">
+                    <div class="columns copyright-grid align-self">
+                        <p class="copy-footer-29">© 2022 BO Software, Tüm Hakları Saklıdır. <a
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        &#10548;
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- /move top -->
+</section>
+
+<!-- jQuery and Bootstrap JS -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+
+<script src="assets/js/theme-change.js"></script><!-- theme switch js (light and dark)-->
+
+<!-- stats number counter-->
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<script src="assets/js/jquery.countup.js"></script>
+<script>
+    $('.counter').countUp();
+</script>
+<!-- //stats number counter -->
+
+<!-- owlcarousel -->
+<script src="assets/js/owl.carousel.js"></script>
+<!-- script for blog post slider -->
+<script>
+    $(document).ready(function () {
+        $('.owl-blog').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: false,
+            responsiveClass: true,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                480: {
+                    items: 1,
+                    nav: true
+                },
+                700: {
+                    items: 1,
+                    nav: true
+                },
+                1090: {
+                    items: 1,
+                    nav: true
+                }
+            }
+        })
+    })
+</script>
+<!-- //script for blog post slider -->
+
+<!-- script for tesimonials carousel slider -->
+<script>
+    $(document).ready(function () {
+        $("#owl-demo1").owlCarousel({
+            loop: true,
+            nav: false,
+            margin: 50,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                736: {
+                    items: 1,
+                    nav: false
+                }
+            }
+        })
+    })
+</script>
+<!-- //script for tesimonials carousel slider -->
+
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+
+        $('.popup-with-move-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom'
+        });
+    });
+</script>
+
+<!-- disable body scroll which navbar is in active -->
+<script>
+    $(function () {
+        $('.navbar-toggler').click(function () {
+            $('body').toggleClass('noscroll');
+        })
+    });
+</script>
+<!-- disable body scroll which navbar is in active -->
+
+<!-- MENU-JS -->
+<script>
+    $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 80) {
+            $("#site-header").addClass("nav-fixed");
+        } else {
+            $("#site-header").removeClass("nav-fixed");
+        }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+        $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+        if ($(window).width() > 991) {
+            $("header").removeClass("active");
+        }
+        $(window).on("resize", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+        });
+    });
+</script>
+<!-- //MENU-JS -->
+
+<!-- bootstrap -->
+<script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
